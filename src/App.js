@@ -39,7 +39,7 @@ class App extends Component {
       console.log('Recipients: ' + this.state.recipients)
     }
 
-    fetch(`http://localhost:4000/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
+    fetch(`/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
     .catch(err => console.error(err));
 
     updatedState.caseNums.splice(0);
