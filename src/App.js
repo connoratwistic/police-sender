@@ -38,8 +38,7 @@ class App extends Component {
       this.state.recipients.push(updatedState.recipient);
       console.log('Recipients: ' + this.state.recipients)
     }
-
-    fetch(`https://617a66b406688b69f5b7b7fb--testsender.netlify.app:4000/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
+    fetch(window.location.href + `:4000/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
     .catch(err => console.error(err));
 
     updatedState.caseNums.splice(0);
