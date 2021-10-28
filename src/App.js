@@ -39,7 +39,7 @@ class App extends Component {
       console.log('Recipients: ' + this.state.recipients)
     }
 
-    fetch(`/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
+    fetch(`http://https://617a66b406688b69f5b7b7fb--testsender.netlify.app:4000/send-text?recipient=${updatedState.recipients[0]}&caseNum=${updatedState.caseNums[0]}&ucrCode=${updatedState.ucrCodes[0]}`)
     .catch(err => console.error(err));
 
     updatedState.caseNums.splice(0);
